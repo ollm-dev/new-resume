@@ -1,5 +1,6 @@
-
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
+import animatePlugin from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -63,25 +64,39 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// resume: {
-				// 	blue: '#1E40AF',
-				// 	lightBlue: '#3B82F6',
-				// 	gray: '#F3F4F6',
-				// 	darkGray: '#4B5563',
-				// 	accent: '#8B5CF6'
-				// }
 				resume: {
-					blue: '#4682B4',      // 主色调，紫色
-					lightBlue: '#5499C7', // 次要蓝色，浅群青蓝
-					gray: '#F9EBEA',      // 浅灰背景，淡粉灰
-					darkGray: '#784212',  // 深灰文字，深棕
-					accent: '#F39C12'     // 强调色，橙黄
+					blue: '#3A5CCC',      // 现代亮蓝色 - 主色调
+					lightBlue: '#8A7FFF', // 更偏淡紫色的色调
+					purple: '#9875FF',    // 淡紫色 - 新增色调
+					gray: '#F5F5FF',      // 超淡紫灰色 - 背景色
+					darkGray: '#2A3035',  // 近黑灰色 - 主文本
+					accent: '#FF6B9D',    // 粉红色 - 强调色
+					accent2: '#00B8C2',   // 青绿色 - 第二强调色
+					neutral: '#FAFAFF',   // 近白色（带紫) - 卡片背景
+					gradient: {
+						start: '#3A5CCC',  // 渐变开始色 - 保持蓝色
+						end: '#8A7FFF'     // 渐变结束色 - 改为淡紫色
+					},
+					purpleGradient: {
+						start: '#8A7FFF',  // 紫色渐变开始色
+						end: '#B195FF'     // 紫色渐变结束色
+					}
 				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				sm: 'calc(var(--radius) - 4px)',
+				'2xl': '1rem',
+				'3xl': '1.5rem',
+			},
+			boxShadow: {
+				'soft': '0 5px 30px -15px rgba(0, 0, 0, 0.15)',
+				'hover': '0 10px 40px -15px rgba(0, 0, 0, 0.2)',
+				'card': '0 2px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05)',
+				'accent': '0 15px 30px -10px rgba(255, 107, 157, 0.2)',
+				'blue': '0 15px 30px -10px rgba(58, 92, 204, 0.2)',
+				'purple': '0 15px 30px -10px rgba(138, 127, 255, 0.25)',
 			},
 			keyframes: {
 				'accordion-down': {
@@ -107,15 +122,67 @@ export default {
 				'slide-up': {
 					'0%': { transform: 'translateY(20px)', opacity: '0' },
 					'100%': { transform: 'translateY(0)', opacity: '1' }
+				},
+				'slide-in-right': {
+					'0%': { transform: 'translateX(20px)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-8px)' }
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-out',
-				'slide-up': 'slide-up 0.5s ease-out'
+				'slide-up': 'slide-up 0.5s ease-out',
+				'slide-in-right': 'slide-in-right 0.5s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
+			},
+			backdropBlur: {
+				xs: '2px',
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		animatePlugin,
+		plugin(function({ addUtilities }) {
+			addUtilities({
+				'.text-shadow-sm': {
+					'text-shadow': '0 1px 2px rgba(0, 0, 0, 0.1)'
+				},
+				'.text-shadow': {
+					'text-shadow': '0 2px 4px rgba(0, 0, 0, 0.1)'
+				},
+				'.text-shadow-md': {
+					'text-shadow': '0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08)'
+				},
+				'.text-shadow-lg': {
+					'text-shadow': '0 15px 30px rgba(0, 0, 0, 0.11), 0 5px 15px rgba(0, 0, 0, 0.08)'
+				},
+				'.text-gradient': {
+					'background-clip': 'text',
+					'-webkit-background-clip': 'text',
+					'-webkit-text-fill-color': 'transparent',
+				},
+				'.glassmorphism': {
+					'background': 'rgba(255, 255, 255, 0.8)',
+					'backdrop-filter': 'blur(12px)',
+					'-webkit-backdrop-filter': 'blur(12px)',
+				},
+				'.purple-gradient-text': {
+					'background-image': 'linear-gradient(45deg, #8A7FFF, #B195FF)',
+					'background-clip': 'text',
+					'-webkit-background-clip': 'text',
+					'-webkit-text-fill-color': 'transparent',
+				}
+			})
+		})
+	],
 } satisfies Config;

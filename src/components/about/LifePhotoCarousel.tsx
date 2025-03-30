@@ -12,10 +12,12 @@ import { LazyImage } from '@/components/ui/lazy-image';
  */
 const LifePhotoCarousel = () => {
   return (
-    <div className="bg-white rounded-lg p-8 shadow-md border border-gray-200">
+    <div className="bg-resume-neutral rounded-3xl p-8 md:p-10 shadow-soft border border-white/40 hover:shadow-purple transition-shadow duration-300">
       <div className="flex items-center gap-4 mb-8">
-        <Camera className="text-resume-blue h-7 w-7" />
-        <h3 className="text-2xl font-semibold text-resume-blue">生活掠影</h3>
+        <div className="p-3 bg-resume-purple/10 rounded-xl flex-shrink-0">
+          <Camera className="h-7 w-7 text-resume-purple" />
+        </div>
+        <h3 className="text-2xl font-semibold purple-gradient-text">生活掠影</h3>
       </div>
       
       <div className="relative px-12">
@@ -23,17 +25,17 @@ const LifePhotoCarousel = () => {
           <CarouselContent>
             <CarouselItem className="md:basis-1/2 lg:basis-1/3">
               <div className="p-2">
-                <Card className="overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <Card className="overflow-hidden shadow-card hover:shadow-hover transition-all duration-300 bg-white border-0 rounded-2xl group">
                   <AspectRatio ratio={4/3}>
                     <LazyImage 
                       src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
                       alt="学习日常" 
-                      className="object-cover w-full h-full rounded-t-lg"
+                      className="object-cover w-full h-full rounded-t-2xl group-hover:scale-105 transition-transform duration-700"
                     />
                   </AspectRatio>
-                  <CardContent className="p-5">
-                    <h4 className="font-medium text-gray-900 mb-2">专注学习</h4>
-                    <p className="text-sm text-gray-600">钻研技术，持续学习是我的日常</p>
+                  <CardContent className="p-6">
+                    <h4 className="font-semibold text-lg text-resume-darkGray mb-2">专注学习</h4>
+                    <p className="text-gray-600">钻研技术，持续学习是我的日常</p>
                   </CardContent>
                 </Card>
               </div>
@@ -41,17 +43,17 @@ const LifePhotoCarousel = () => {
             
             <CarouselItem className="md:basis-1/2 lg:basis-1/3">
               <div className="p-2">
-                <Card className="overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <Card className="overflow-hidden shadow-card hover:shadow-hover transition-all duration-300 bg-white border-0 rounded-2xl group">
                   <AspectRatio ratio={4/3}>
                     <LazyImage 
                       src="https://images.unsplash.com/photo-1518495973542-4542c06a5843" 
                       alt="户外休闲" 
-                      className="object-cover w-full h-full rounded-t-lg"
+                      className="object-cover w-full h-full rounded-t-2xl group-hover:scale-105 transition-transform duration-700"
                     />
                   </AspectRatio>
-                  <CardContent className="p-5">
-                    <h4 className="font-medium text-gray-900 mb-2">亲近自然</h4>
-                    <p className="text-sm text-gray-600">户外活动让我保持身心平衡</p>
+                  <CardContent className="p-6">
+                    <h4 className="font-semibold text-lg text-resume-darkGray mb-2">亲近自然</h4>
+                    <p className="text-gray-600">户外活动让我保持身心平衡</p>
                   </CardContent>
                 </Card>
               </div>
@@ -59,29 +61,29 @@ const LifePhotoCarousel = () => {
             
             <CarouselItem className="md:basis-1/2 lg:basis-1/3">
               <div className="p-2">
-                <Card className="overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <Card className="overflow-hidden shadow-card hover:shadow-hover transition-all duration-300 bg-white border-0 rounded-2xl group">
                   <AspectRatio ratio={4/3}>
                     <LazyImage 
                       src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952" 
                       alt="团队协作" 
-                      className="object-cover w-full h-full rounded-t-lg"
+                      className="object-cover w-full h-full rounded-t-2xl group-hover:scale-105 transition-transform duration-700"
                     />
                   </AspectRatio>
-                  <CardContent className="p-5">
-                    <h4 className="font-medium text-gray-900 mb-2">团队协作</h4>
-                    <p className="text-sm text-gray-600">与伙伴们一起解决问题的瞬间</p>
+                  <CardContent className="p-6">
+                    <h4 className="font-semibold text-lg text-resume-darkGray mb-2">团队协作</h4>
+                    <p className="text-gray-600">与伙伴们一起解决问题的瞬间</p>
                   </CardContent>
                 </Card>
               </div>
             </CarouselItem>
           </CarouselContent>
-          <CarouselPrevious className="left-1" />
-          <CarouselNext className="right-1" />
+          <CarouselPrevious className="left-1 bg-white/80 backdrop-blur-sm border-0 shadow-md hover:bg-white" />
+          <CarouselNext className="right-1 bg-white/80 backdrop-blur-sm border-0 shadow-md hover:bg-white" />
         </Carousel>
       </div>
       
-      <div className="mt-6 text-center">
-        <p className="text-gray-700 italic">
+      <div className="mt-8 text-center">
+        <p className="text-gray-700 italic px-6 py-4 bg-white/40 rounded-xl inline-block max-w-xl shadow-sm backdrop-blur-xs">
           "生活不只有代码，保持平衡才能走得更远"
         </p>
       </div>

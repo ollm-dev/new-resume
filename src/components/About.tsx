@@ -10,18 +10,26 @@ import PersonalDetails from './about/PersonalDetails';
  */
 const About = () => {
   return (
-    <section id="about" className="py-16 md:py-20 bg-white">
-      <div className="container mx-auto px-4 md:px-6 space-y-14">
-        <h2 className="text-3xl font-bold text-resume-blue mb-10 text-center">个人信息</h2>
-         
-        {/* 个人详细信息 */}
-        <PersonalDetails />
+    <section id="about" className="py-20 md:py-24 bg-resume-gray">
+      <div className="container mx-auto px-4 md:px-6 space-y-16">
+        <h2 className="text-4xl font-bold purple-gradient-text mb-12 text-center">
+          个人信息
+        </h2>
+        
         {/* 技术热爱者横幅 */}
-        <PersonalBanner />
+        <div className="transform transition-all hover:translate-y-[-5px] duration-300 hover:shadow-blue rounded-3xl">
+          <PersonalBanner />
+        </div>
+        
+        {/* 个人详细信息 */}
+        <div className="animate-slide-up">
+          <PersonalDetails />
+        </div>
         
         {/* 生活掠影轮播图 */}
-        <LifePhotoCarousel />
-       
+        <div className="animate-slide-in-right">
+          <LifePhotoCarousel />
+        </div>
       </div>
     </section>
   );
