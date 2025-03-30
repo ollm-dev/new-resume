@@ -6,7 +6,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-12 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-resume-blue mb-8">实习经历</h2>
+        <h2 className="text-3xl font-bold text-resume-blue mb-8 text-center">实习经历</h2>
         
         <div className="bg-resume-gray p-6 rounded-lg shadow-sm">
           <div className="flex flex-col md:flex-row md:items-center justify-between mb-6">

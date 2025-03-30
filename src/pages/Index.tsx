@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Navigation from '@/components/Navigation';
@@ -13,17 +12,19 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
       <Navigation />
-      <main className="flex-grow">
-        <About />
-        <Education />
-        <Experience />
-        <Skills />
-        <Projects />
-        <Works />
-        <Interests />
+      <main className="flex-grow container mx-auto px-4 md:px-8 py-8">
+        <div className="space-y-24">
+          <About />
+          <Education />
+          <Experience />
+          <Skills />
+          <Projects />
+          <Works />
+          <Interests />
+        </div>
       </main>
       <Footer />
     </div>

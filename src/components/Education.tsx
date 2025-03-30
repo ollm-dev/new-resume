@@ -6,7 +6,7 @@ const Education = () => {
   return (
     <section id="education" className="py-12 bg-resume-gray">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-resume-blue mb-8">教育经历</h2>
+        <h2 className="text-3xl font-bold text-resume-blue mb-8 text-center">教育经历</h2>
         
         <div className="bg-white p-6 rounded-lg shadow-sm">
           <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">

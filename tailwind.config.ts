@@ -63,12 +63,19 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
+				// resume: {
+				// 	blue: '#1E40AF',
+				// 	lightBlue: '#3B82F6',
+				// 	gray: '#F3F4F6',
+				// 	darkGray: '#4B5563',
+				// 	accent: '#8B5CF6'
+				// }
 				resume: {
-					blue: '#1E40AF',
-					lightBlue: '#3B82F6',
-					gray: '#F3F4F6',
-					darkGray: '#4B5563',
-					accent: '#8B5CF6'
+					blue: '#FF5733',      // 主色调，亮蓝
+					lightBlue: '#4DA8FF', // 次要蓝色，浅亮蓝
+					gray: '#EDEDED',      // 浅灰背景，银灰
+					darkGray: '#343A40',  // 深灰文字，炭黑灰
+					accent: '#FF6B6B'     // 强调色，亮红
 				}
 			},
 			borderRadius: {

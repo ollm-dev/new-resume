@@ -33,7 +33,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-12 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-resume-blue mb-8">项目经历</h2>
+        <h2 className="text-3xl font-bold text-resume-blue mb-8 text-center">项目经历</h2>
         
         <div className="space-y-8">
           {projects.map((project, index) => (

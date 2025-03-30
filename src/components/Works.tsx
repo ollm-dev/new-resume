@@ -41,7 +41,7 @@ const Works = () => {
   return (
     <section id="works" className="py-12 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-resume-blue mb-8">个人作品展示</h2>
+        <h2 className="text-3xl font-bold text-resume-blue mb-8 text-center">个人作品展示</h2>
         
         {/* 大屏幕展示 */}
         <div className="hidden md:block">
