@@ -71,11 +71,11 @@ export default {
 				// 	accent: '#8B5CF6'
 				// }
 				resume: {
-					blue: '#FF5733',      // 主色调，亮蓝
-					lightBlue: '#4DA8FF', // 次要蓝色，浅亮蓝
-					gray: '#EDEDED',      // 浅灰背景，银灰
-					darkGray: '#343A40',  // 深灰文字，炭黑灰
-					accent: '#FF6B6B'     // 强调色，亮红
+					blue: '#4682B4',      // 主色调，紫色
+					lightBlue: '#5499C7', // 次要蓝色，浅群青蓝
+					gray: '#F9EBEA',      // 浅灰背景，淡粉灰
+					darkGray: '#784212',  // 深灰文字，深棕
+					accent: '#F39C12'     // 强调色，橙黄
 				}
 			},
 			borderRadius: {

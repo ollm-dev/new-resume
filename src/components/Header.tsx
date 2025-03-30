@@ -54,8 +54,8 @@ const Header = () => {
           </div>
           
           <div className="animate-slide-up">
-            <a href="/甘智斌-前端_AI全栈开发-19079602718.pdf" download>
-              <Button className="bg-white text-resume-blue hover:bg-gray-100 gap-2 font-medium shadow-sm hover:shadow-md transition-all duration-200 px-5 py-2.5">
+            <a href="/my-resume.pdf" download>
+              <Button className="bg-white text-resume-blue hover:bg-orange-100 gap-2 font-medium shadow-sm hover:shadow-md transition-all duration-200 px-5 py-2.5">
                 <Download size={18} />
                 下载简历PDF
               </Button>
